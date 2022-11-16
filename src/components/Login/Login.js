@@ -118,11 +118,11 @@ const Login = () => {
 
                                             <div onClick={() => {
                                                 setAgency(false)
-                                                setIndividual(!individual)
+                                                setIndividual(true)
                                             }} className={'user_item' + (individual ? " active " : "")}>Cá nhân</div>
                                             <div onClick={() => {
                                                 setIndividual(false)
-                                                setAgency(!agency)
+                                                setAgency(true)
                                             }} className={'user_item' + (agency ? " active " : "")}>Môi giới</div>
 
                                         </div>
