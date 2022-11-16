@@ -116,8 +116,14 @@ const Login = () => {
                                         <p className='login_p'>Trải nghiệm khi chưa có tài khoản <span><a href='/'>Đăng ký ngay</a></span></p>
                                         <div className='type_user'>
 
-                                            <div onClick={() => setIndividual(!individual)} className={'user_item' + (individual ? " active " : "")}>Cá nhân</div>
-                                            <div onClick={() => setAgency(!agency)} className={'user_item' + (agency ? " active " : "")}>Môi giới</div>
+                                            <div onClick={() => {
+                                                setAgency(false)
+                                                setIndividual(!individual)
+                                            }} className={'user_item' + (individual ? " active " : "")}>Cá nhân</div>
+                                            <div onClick={() => {
+                                                setIndividual(false)
+                                                setAgency(!agency)
+                                            }} className={'user_item' + (agency ? " active " : "")}>Môi giới</div>
 
                                         </div>
                                         <div className='user_email_password'>
