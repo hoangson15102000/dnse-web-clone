@@ -1,0 +1,188 @@
+.heading {
+  position: fixed;
+  width: 100%;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+.heading .nav_login {
+  display: flex;
+}
+
+.heading .nav_logo_dnse {
+  width: 22px;
+  height: 26px;
+  margin: 9px 6px 9px 16px;
+}
+
+.heading .nav_list {
+  display: flex;
+}
+.heading .nav_name {
+  font-weight: 700;
+  line-height: 44px;
+  padding-right: 18px;
+}
+.heading .nav_sub_name {
+  font-size: 10px;
+  color: #91131c;
+  font-weight: 500;
+  margin-top: -16px;
+  margin-left: 18px;
+}
+.heading .nav_list li a {
+  font-size: 14px;
+  line-height: 44px;
+  padding: 0px 9px;
+  color: #9da0a6;
+  font-weight: 500;
+}
+.heading .nav_list li a:hover {
+  color: #91131c;
+}
+.heading .nav_list li .icon-down-ai {
+  font-size: 10px;
+}
+.nav_login .nav_time {
+  position: absolute;
+  right: 0;
+  display: flex;
+}
+.nav_time p {
+  font-size: 14px;
+  line-height: 44px;
+}
+.nav_time p span {
+  color: #9da0a6;
+}
+.nav_time .time_icon {
+  padding: 10px 16px;
+}
+/* Main content */
+.main_content {
+  position: relative;
+}
+.main_content .sub_main_content {
+  width: 900px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sub_main_content .table-1 {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 450px 450px;
+  height: 466px;
+  box-shadow: 0px 0px 4px 4px rgb(0 0 0 / 10%);
+}
+.sub_main_content .left_table_login {
+  background-color: #91131c;
+}
+.sub_main_content .right_table_login {
+  background-color: white;
+}
+.left_table_sub {
+  padding: 100px 100px;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+}
+.left_table_sub img {
+  padding: 30px;
+}
+.border-1 {
+  border: 1px solid white;
+  opacity: 0.6;
+  width: 33%;
+  margin: 0 auto;
+}
+.left_table_sub .sub_content {
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 16px;
+}
+.left_table_sub .sub_author {
+  padding-top: 16px;
+  font-size: 14px;
+}
+
+.right_table_login .right_sub_login {
+  padding: 32px 54px 0 54px;
+}
+.form_login .login_p {
+  color: #9da0a6;
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 22px;
+}
+.form_login .login_p a {
+  color: #91131c;
+  text-decoration: underline;
+}
+.form_login .type_user {
+  display: flex;
+}
+.form_login .type_user .user_item {
+  font-size: 14px;
+  margin-right: 24px;
+  padding-bottom: 8px;
+  font-weight: 500;
+}
+.form_login .type_user .user_item:active {
+  border-bottom: 1px solid #91131c;
+}
+.active {
+  border-bottom: 2px solid #91131c;
+}
+.form_login .user_email_password label {
+  font-size: 12px;
+  color: #9da0a6;
+  display: block;
+  padding: 32px 0px 4px 0;
+}
+.form_login .user_email_password input,
+.login_password input {
+  font-size: 14px;
+  width: 100%;
+  padding: 2px 8px 8px 0;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #9da0a6 !important;
+}
+.form_login .user_email_password input:hover,
+.login_password input:hover {
+  border-bottom: 2px solid #91131c !important;
+}
+.login_password .space_div {
+  padding: 10px;
+}
+.form_login .btn_login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form_login .btn_login button {
+  background-color: #91131c;
+  padding: 10px 24px;
+  font-size: 16px;
+  border: none;
+  color: white;
+  margin: 32px 0;
+  border-radius: 25px;
+  min-width: 240px;
+  cursor: pointer;
+}
+.form_login .btn_login button:hover {
+  background-color: rgb(101, 18, 24);
+}
+.form_login .forget_password {
+  text-align: center;
+  text-decoration: underline;
+  line-height: 1.4;
+  font-weight: 400;
+  font-size: 14px;
+  color: #91121c;
+  padding: 54px 0px 24px 0;
+}
