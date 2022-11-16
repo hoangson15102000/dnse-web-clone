@@ -6,13 +6,17 @@ import { useEffect, useState } from 'react';
 
 
 const Login = () => {
-    const [user1, setUser1] = useState(true);
-    const [user2, setUser2] = useState(false);
+    const [individual, setIndividual] = useState(true);
+    const [agency, setAgency] = useState(false);
+    // setInterval(() => {
+    //     var showDate = new Date();
+    //     var displayToCurrentTime = showDate.getDate() + '/' + showDate.getMonth() + '/' + showDate.getFullYear();
+    //     var displayTime = showDate.getHours() + ':' + showDate.getMinutes() + ':' + showDate.getSeconds();
+    // }, 1000)
+
     var showDate = new Date();
     var displayToCurrentTime = showDate.getDate() + '/' + showDate.getMonth() + '/' + showDate.getFullYear();
     var displayTime = showDate.getHours() + ':' + showDate.getMinutes() + ':' + showDate.getSeconds();
-
-
     const [content, setContent] = useState("");
     const [author, setAuthor] = useState("");
     const randomNumber = Math.floor(Math.random() * 10);
@@ -43,6 +47,19 @@ const Login = () => {
 
                 author: "Jason Goldberg",
             },
+            {
+                content:
+                    "How many millionaires do you know who have become wealthy by investing in savings accounts? I rest my case.",
+
+                author: "Robert G. Allen",
+            },
+            {
+                content:
+                    "It's not whether you're right or wrong that's important, but how much money you make when you're right and how much you lose when you're wrong.",
+
+                author: "George Soros",
+            }
+
         ];
         const randomContent =
             arrayContent[Math.floor(Math.random() * arrayContent.length)];
@@ -51,23 +68,7 @@ const Login = () => {
 
         setContent(randomContent.content);
     }, [randomNumber]);
-    useEffect(() => {
-        const userType1 = document.querySelector('.item1');
-        const userType2 = document.querySelector('.item2');
-        if (user1) {
-            userType2.classList.remove('active');
-            userType1.classList.add('active');
-        }
-        if (user2) {
-            setUser1(false)
 
-            userType2.classList.add('active')
-            userType1.classList.remove('active')
-        }
-
-
-
-    })
 
     return (
         <>
@@ -115,8 +116,8 @@ const Login = () => {
                                         <p className='login_p'>Trải nghiệm khi chưa có tài khoản <span><a href='/'>Đăng ký ngay</a></span></p>
                                         <div className='type_user'>
 
-                                            <div onClick={() => setUser1(true)} className='user_item item1 '>Cá nhân</div>
-                                            <div onClick={() => setUser2(true)} className='user_item item2'>Môi giới</div>
+                                            <div onClick={() => setIndividual(!individual)} className={'user_item' + (individual ? " active " : "")}>Cá nhân</div>
+                                            <div onClick={() => setAgency(!agency)} className={'user_item' + (agency ? " active " : "")}>Môi giới</div>
 
                                         </div>
                                         <div className='user_email_password'>
