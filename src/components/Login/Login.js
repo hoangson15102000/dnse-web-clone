@@ -4,9 +4,13 @@ import { AiOutlineDown } from 'react-icons/ai';
 import { useEffect, useState } from 'react';
 
 
+
 const Login = () => {
     const [user1, setUser1] = useState(true);
     const [user2, setUser2] = useState(false);
+    var showDate = new Date();
+    var displayToCurrentTime = showDate.getDate() + '/' + showDate.getMonth() + '/' + showDate.getFullYear();
+    var displayTime = showDate.getHours() + ':' + showDate.getMinutes() + ':' + showDate.getSeconds();
 
 
     const [content, setContent] = useState("");
@@ -81,7 +85,7 @@ const Login = () => {
                             <li><a href='/'>Tiện ích <  AiOutlineDown className='icon-down-ai' /></a></li>
                         </ul>
                         <div className='nav_time'>
-                            <p >09:25:54 <span>10/08/2022</span></p>
+                            <p >{displayTime} <span>{displayToCurrentTime}</span></p>
                             <div className='time_icon'>
                                 <img src={require('./Vector.png')} alt='/' />
                             </div>
